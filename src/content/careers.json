@@ -1,0 +1,66 @@
+{
+  "culture": [
+    {
+      "title": "Impact work",
+      "description": "Ship products and IT systems clients use every day — not slide decks that sit unused."
+    },
+    {
+      "title": "Modern stack",
+      "description": "React, Next.js, cloud, and practical AI — with room to learn and raise the bar."
+    },
+    {
+      "title": "Remote-friendly",
+      "description": "Flexible remote and hybrid options so you can do your best work from where you thrive."
+    },
+    {
+      "title": "Growth mindset",
+      "description": "Learning budget, mentorship, and projects that stretch your craft."
+    }
+  ],
+  "benefits": [
+    "Competitive salary and performance bonuses",
+    "Flexible remote and hybrid work options",
+    "Health, dental, and vision coverage",
+    "Professional development and learning budget",
+    "Home office / equipment stipend",
+    "Generous paid time off",
+    "Modern tooling and collaboration stack",
+    "Meaningful projects with clear ownership"
+  ],
+  "process": [
+    {
+      "title": "Apply",
+      "detail": "Send your resume and a short note about what you want to build next."
+    },
+    {
+      "title": "Intro call",
+      "detail": "A 30-minute conversation about role fit, culture, and your goals."
+    },
+    {
+      "title": "Skills chat",
+      "detail": "A practical discussion or small exercise related to the work — no trick puzzles."
+    },
+    {
+      "title": "Offer",
+      "detail": "We align on scope, compensation, and start date — then welcome you aboard."
+    }
+  ],
+  "jobs": [
+    {
+      "slug": "frontend-developer",
+      "title": "Frontend Developer",
+      "location": "Remote (US)",
+      "type": "Full-time",
+      "department": "Engineering",
+      "description": "Build polished, accessible web experiences with modern frameworks and collaborate with design and backend teams."
+    },
+    {
+      "slug": "it-support-specialist",
+      "title": "IT Support Specialist",
+      "location": "Hybrid — Austin, TX",
+      "type": "Full-time",
+      "department": "Operations",
+      "description": "Provide tier-1 and tier-2 support, manage endpoints, and help clients and staff stay productive and secure."
+    }
+  ]
+}

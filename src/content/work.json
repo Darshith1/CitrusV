@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "logistics-ops-platform",
+    "title": "Operations platform for a logistics network",
+    "industry": "Transportation",
+    "challenge": "Dispatch teams juggled spreadsheets, radio calls, and a legacy portal that could not scale with new routes.",
+    "outcome": "A unified web app for routing, status, and reporting — cutting handoff time and giving leadership live visibility.",
+    "results": ["Faster dispatch handoffs", "Live route visibility", "Fewer spreadsheet errors"],
+    "stack": ["Next.js", "APIs", "Cloud", "Dashboards"]
+  },
+  {
+    "slug": "healthcare-patient-portal",
+    "title": "Secure patient-facing portal",
+    "industry": "Healthcare",
+    "challenge": "Patients struggled to book visits and access records; staff spent hours on phone support for basic tasks.",
+    "outcome": "A responsive portal with appointments, messaging, and clear privacy controls — launched on schedule with IT hardening.",
+    "results": ["Lower support call volume", "Self-serve bookings", "Hardened access controls"],
+    "stack": ["React", "Auth", "IT Security", "Hosting"]
+  },
+  {
+    "slug": "retail-commerce-refresh",
+    "title": "E-commerce refresh for a retail group",
+    "industry": "Retail",
+    "challenge": "An outdated storefront and disconnected inventory tools slowed campaigns and confused customers.",
+    "outcome": "A modern storefront, inventory integrations, and a marketing-ready CMS so merchandising and SEO teams move faster.",
+    "results": ["Faster campaign launches", "Cleaner checkout path", "SEO-ready content system"],
+    "stack": ["Web", "Integrations", "SEO", "Analytics"]
+  }
+]

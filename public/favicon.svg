@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="CitrusV">
+  <defs>
+    <linearGradient id="b" x1="10" y1="8" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E90FF"/>
+      <stop offset="1" stop-color="#0056B3"/>
+    </linearGradient>
+    <linearGradient id="o" x1="54" y1="8" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8C00"/>
+      <stop offset="1" stop-color="#D35400"/>
+    </linearGradient>
+  </defs>
+  <path d="M10 8 L30.2 54 H21.2 L6.5 8 Z" fill="url(#b)"/>
+  <path d="M54 8 L33.8 54 H42.8 L57.5 8 Z" fill="url(#o)"/>
+  <circle cx="32" cy="52.5" r="3" fill="#0D2240"/>
+</svg>

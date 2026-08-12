@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Acme Logistics",
+    "industry": "Transportation",
+    "testimonial": "CitrusV transformed our operations with a reliable platform our team uses every day."
+  },
+  {
+    "name": "Bright Health Co.",
+    "industry": "Healthcare",
+    "testimonial": "Their support and expertise helped us launch secure patient-facing tools on time."
+  },
+  {
+    "name": "Summit Retail Group",
+    "industry": "Retail",
+    "testimonial": "From e-commerce to inventory integrations, CitrusV delivered end to end."
+  },
+  {
+    "name": "Nova Financial",
+    "industry": "Finance",
+    "testimonial": "We trust CitrusV for scalable software and clear communication at every step."
+  },
+  {
+    "name": "Greenfield Manufacturing",
+    "industry": "Manufacturing",
+    "testimonial": "Custom software from CitrusV streamlined our shop floor and reporting."
+  },
+  {
+    "name": "Horizon Education",
+    "industry": "Education",
+    "testimonial": "A modern website and IT support that keeps our staff and students connected."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Website Development",
+    "description": "Responsive, fast websites tailored to your brand and business goals.",
+    "icon": "globe"
+  },
+  {
+    "title": "Custom Software",
+    "description": "Bespoke applications built to fit your workflows and scale with growth.",
+    "icon": "code"
+  },
+  {
+    "title": "IT Solutions & Support",
+    "description": "Proactive monitoring, help desk, and infrastructure you can rely on.",
+    "icon": "headset"
+  },
+  {
+    "title": "Cloud & DevOps",
+    "description": "Cloud migration, CI/CD, and infrastructure as code for reliable delivery.",
+    "icon": "cloud"
+  },
+  {
+    "title": "Digital Marketing",
+    "description": "SEO, content, and campaigns that reach the right audience and convert.",
+    "icon": "megaphone"
+  },
+  {
+    "title": "Citrus AI Integration",
+    "description": "Practical AI features embedded into your products and internal tools.",
+    "icon": "sparkles"
+  }
+]
