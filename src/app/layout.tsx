@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "CitrusV — Websites, Software & IT",
     template: "%s | CitrusV",
@@ -25,10 +30,6 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico"],
   },
   manifest: "/site.webmanifest",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0D2240" },
-    { media: "(prefers-color-scheme: dark)", color: "#0D2240" },
-  ],
   openGraph: {
     title: "CitrusV — Websites, Software & IT",
     description:
@@ -43,6 +44,13 @@ export const metadata: Metadata = {
     description: "Websites, software, and IT solutions that scale with your business.",
     images: ["/icon-512.png"],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#0D2240" },
+    { media: "(prefers-color-scheme: dark)", color: "#0D2240" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
