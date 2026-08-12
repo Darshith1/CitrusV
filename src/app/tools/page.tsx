@@ -63,13 +63,13 @@ export default async function ToolsPage({ searchParams }: ToolsPageProps) {
       : "all";
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-12 md:py-16">
+    <div className="container-citrus py-12 sm:py-16">
       <FadeUp>
-        <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue">CitrusV Toolbox</p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight text-navy dark:text-slate-50 md:text-5xl">
+        <p className="text-xs font-semibold uppercase tracking-wider text-brand-blue sm:text-sm">CitrusV Toolbox</p>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-navy sm:text-4xl md:text-5xl">
           <GradientText>Free online tools</GradientText>
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">
+        <p className="mt-4 max-w-2xl text-base text-muted sm:text-lg">
           {getToolCount()} practical utilities — privacy-first, fast, and free. Search or browse by category.
         </p>
       </FadeUp>

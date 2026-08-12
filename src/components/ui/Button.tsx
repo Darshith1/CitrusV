@@ -17,9 +17,9 @@ const variantStyles: Record<ButtonVariant, string> = {
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-2.5 text-sm font-medium",
-  lg: "px-8 py-3 text-base font-semibold",
+  sm: "min-h-10 px-4 py-2 text-sm",
+  md: "min-h-11 px-6 py-2.5 text-sm font-medium",
+  lg: "min-h-12 px-8 py-3 text-base font-semibold",
 };
 
 type SharedProps = {
@@ -56,8 +56,10 @@ export function Button(props: ButtonProps) {
     "aria-label": ariaLabel,
   } = props;
 
+  const fullWidth = Boolean(className?.includes("w-full"));
+
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+    "inline-flex items-center justify-center gap-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 touch-manipulation",
     variantStyles[variant],
     sizeStyles[size],
     className,
@@ -66,7 +68,10 @@ export function Button(props: ButtonProps) {
   if ("href" in props && props.href) {
     const { href, target, rel } = props;
     return (
-      <motion.div {...motionInteraction} className="inline-flex">
+      <motion.div
+        {...motionInteraction}
+        className={cn("inline-flex max-w-full", fullWidth && "w-full")}
+      >
         <Link
           href={href}
           className={classes}

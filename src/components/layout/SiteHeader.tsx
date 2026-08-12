@@ -43,7 +43,7 @@ export function SiteHeader() {
           : "border-[var(--border-subtle)]/60 bg-white/70 backdrop-blur-md",
       )}
     >
-      <div className="container-citrus flex h-16 items-center justify-between gap-4 lg:h-20">
+      <div className="container-citrus flex h-14 items-center justify-between gap-3 sm:h-16 lg:h-20">
         <Logo />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
@@ -72,8 +72,9 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-[var(--border-subtle)] p-2.5 text-navy lg:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-[var(--border-subtle)] p-2.5 text-navy touch-manipulation lg:hidden"
           aria-expanded={open}
+          aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -95,36 +96,47 @@ export function SiteHeader() {
             />
             <motion.aside
               id="mobile-nav"
-              className="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col border-l border-[var(--border-subtle)] bg-white p-6 shadow-2xl lg:hidden"
+              className="fixed inset-y-0 right-0 z-50 flex w-[min(100%,22rem)] flex-col border-l border-[var(--border-subtle)] bg-white shadow-2xl lg:hidden"
+              style={{
+                paddingTop: "max(1.25rem, env(safe-area-inset-top))",
+                paddingBottom: "max(1.25rem, env(safe-area-inset-bottom))",
+              }}
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 320, damping: 32 }}
             >
-              <div className="mb-8 flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3 px-5 pb-6">
                 <Logo />
                 <button
                   type="button"
-                  className="rounded-full p-2 text-navy"
+                  className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-navy touch-manipulation"
                   aria-label="Close menu"
                   onClick={() => setOpen(false)}
                 >
                   <X className="h-5 w-5" />
                 </button>
               </div>
-              <nav className="flex flex-col gap-1" aria-label="Mobile">
+              <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-3" aria-label="Mobile">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-xl px-3 py-3 text-base font-medium text-navy hover:bg-surface"
+                    className="rounded-xl px-4 py-3.5 text-base font-medium text-navy transition-colors hover:bg-surface active:bg-surface"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
                   </Link>
                 ))}
+                <Link
+                  href="/contact"
+                  className="rounded-xl px-4 py-3.5 text-base font-medium text-navy transition-colors hover:bg-surface active:bg-surface"
+                  onClick={() => setOpen(false)}
+                >
+                  Contact
+                </Link>
               </nav>
-              <div className="mt-auto pt-8">
+              <div className="mt-auto border-t border-[var(--border-subtle)] px-5 pt-5">
                 <Button
                   href={bookCallHref()}
                   className="w-full justify-center"

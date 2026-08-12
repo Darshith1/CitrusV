@@ -85,7 +85,7 @@ export default function ContactForm() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            className="rounded-2xl border border-brand-blue/30 bg-brand-blue/5 p-10 text-center"
+            className="rounded-2xl border border-brand-blue/30 bg-brand-blue/5 p-6 text-center sm:p-10"
           >
             <motion.div
               initial={{ scale: 0 }}
@@ -114,7 +114,7 @@ export default function ContactForm() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onSubmit={handleSubmit}
-            className="space-y-5 rounded-2xl border border-[var(--border-subtle)] bg-white p-8 shadow-sm dark:bg-navy-light/30"
+            className="space-y-5 rounded-2xl border border-[var(--border-subtle)] bg-white p-5 shadow-sm sm:p-8"
           >
             {roleTitle ? (
               <p className="rounded-xl bg-brand-orange/10 px-4 py-3 text-sm text-navy dark:text-slate-200">

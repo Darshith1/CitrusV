@@ -25,7 +25,7 @@ export default function BookPage() {
   const embedUrl = googleAppointmentsEmbedUrl();
 
   return (
-    <div className="container-citrus py-16 lg:py-24">
+    <div className="container-citrus py-12 sm:py-16 lg:py-24">
       <SectionHeading
         eyebrow="Book"
         title="Strategy call with"
@@ -36,18 +36,18 @@ export default function BookPage() {
             : "Request a time by email — we’ll confirm and send a Google Meet link."
         }
         align="center"
-        className="mb-12"
+        className="mb-8 sm:mb-12"
       />
 
       <div
         className={
           appointmentsUrl
-            ? "mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.9fr_1.2fr]"
-            : "mx-auto grid max-w-4xl gap-8 lg:grid-cols-[1fr_1.1fr]"
+            ? "mx-auto grid max-w-5xl gap-6 sm:gap-8 lg:grid-cols-[0.9fr_1.2fr]"
+            : "mx-auto grid max-w-4xl gap-6 sm:gap-8 lg:grid-cols-[1fr_1.1fr]"
         }
       >
         <FadeUp>
-          <ul className="space-y-4 rounded-3xl border border-[var(--border-subtle)] bg-surface/60 p-8">
+          <ul className="space-y-4 rounded-2xl border border-[var(--border-subtle)] bg-surface/60 p-5 sm:rounded-3xl sm:p-8">
             <li className="flex gap-3 text-sm text-muted">
               <Clock className="mt-0.5 h-5 w-5 shrink-0 text-brand-blue" aria-hidden />
               <span>
@@ -78,10 +78,10 @@ export default function BookPage() {
         </FadeUp>
 
         <FadeUp>
-          <div className="overflow-hidden rounded-3xl border border-[var(--border-subtle)] bg-gradient-to-br from-brand-blue/10 to-brand-orange/10">
+          <div className="overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-gradient-to-br from-brand-blue/10 to-brand-orange/10 sm:rounded-3xl">
             {appointmentsUrl && embedUrl ? (
-              <div className="p-4 sm:p-6">
-                <div className="mb-4 flex flex-wrap items-center justify-between gap-3 px-1">
+              <div className="p-3 sm:p-6">
+                <div className="mb-4 flex flex-col gap-3 px-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
                   <p className="text-sm text-muted">
                     <Video className="mr-1.5 inline h-4 w-4 text-brand-blue" aria-hidden />
                     Direct Google Meet booking · {CONTACT_EMAIL}
@@ -92,6 +92,7 @@ export default function BookPage() {
                     rel="noopener noreferrer"
                     variant="ghost"
                     size="sm"
+                    className="w-full sm:w-auto"
                   >
                     <Calendar className="h-4 w-4" aria-hidden />
                     Open in Google
@@ -100,21 +101,21 @@ export default function BookPage() {
                 <iframe
                   src={embedUrl}
                   title="Book a Google Meet with CitrusV"
-                  className="h-[640px] w-full rounded-2xl bg-white"
+                  className="h-[min(70dvh,520px)] w-full rounded-xl bg-white sm:h-[640px] sm:rounded-2xl"
                   loading="lazy"
                 />
               </div>
             ) : (
-              <div className="p-10 text-center">
-                <Video className="mx-auto h-12 w-12 text-brand-blue" aria-hidden />
-                <p className="mt-4 text-muted">
+              <div className="p-6 text-center sm:p-10">
+                <Video className="mx-auto h-10 w-10 text-brand-blue sm:h-12 sm:w-12" aria-hidden />
+                <p className="mt-4 text-sm text-muted sm:text-base">
                   Remote-friendly · No obligation · Google Meet after we confirm
                 </p>
                 <p className="mt-2 text-sm text-muted">
                   Reach us at{" "}
                   <a
                     href={bookCallMailto()}
-                    className="font-medium text-brand-blue hover:underline"
+                    className="break-all font-medium text-brand-blue hover:underline"
                   >
                     {CONTACT_EMAIL}
                   </a>

@@ -9,13 +9,13 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="container-citrus py-16 lg:py-24">
+    <div className="container-citrus py-12 sm:py-16 lg:py-24">
       <SectionHeading
         eyebrow="Contact"
         title="Let's talk about"
         highlight="your project"
         description="Share a few details — we'll open your mail client with a pre-filled message."
-        className="mb-12"
+        className="mb-8 sm:mb-12"
       />
       <Suspense
         fallback={

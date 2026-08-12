@@ -37,7 +37,7 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl dark:text-white">
+      <h2 className="text-balance text-2xl font-bold tracking-tight text-navy sm:text-3xl md:text-4xl">
         {title}
         {highlight ? (
           <>
@@ -47,7 +47,7 @@ export function SectionHeading({
         ) : null}
       </h2>
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">{description}</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted sm:mt-4 sm:text-base md:text-lg">{description}</p>
       ) : null}
     </motion.header>
   );

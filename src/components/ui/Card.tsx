@@ -26,7 +26,7 @@ export function Card({
     whileHover: { y: -4, scale: 1.005 },
     transition: { type: "spring" as const, stiffness: 320, damping: 26 },
     className: cn(
-      "group relative overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-white p-6 shadow-sm transition-shadow hover:shadow-xl hover:shadow-navy/10",
+      "group relative overflow-hidden rounded-2xl border border-[var(--border-subtle)] bg-white p-5 shadow-sm transition-shadow hover:shadow-xl hover:shadow-navy/10 sm:p-6",
       href && "cursor-pointer",
       className,
     ),

@@ -40,9 +40,9 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-[var(--border-subtle)] bg-navy text-slate-200">
-      <div className="container-citrus py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,minmax(0,1fr))]">
-          <div className="space-y-5">
+      <div className="container-citrus py-12 sm:py-16 lg:py-20">
+        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[1.4fr_repeat(3,minmax(0,1fr))]">
+          <div className="space-y-5 sm:col-span-2 lg:col-span-1">
             <Logo onDark />
             <p className="max-w-sm text-sm leading-relaxed text-slate-400">
               CitrusV designs and builds websites, software, and IT systems that help businesses
@@ -57,7 +57,7 @@ export function SiteFooter() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                className="inline-flex min-h-11 items-center gap-2 transition-colors hover:text-white"
               >
                 <Linkedin className="h-4 w-4 text-brand-blue" aria-hidden />
                 LinkedIn
@@ -70,7 +70,7 @@ export function SiteFooter() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
                 {col.title}
               </h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-4 space-y-1">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     {"external" in link && link.external ? (
@@ -78,7 +78,7 @@ export function SiteFooter() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-sm text-slate-400 transition-colors hover:text-brand-orange"
+                        className="inline-flex min-h-10 items-center gap-1 text-sm text-slate-400 transition-colors hover:text-brand-orange"
                       >
                         {link.label}
                         <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
@@ -86,14 +86,14 @@ export function SiteFooter() {
                     ) : link.href.startsWith("mailto:") ? (
                       <a
                         href={link.href}
-                        className="text-sm text-slate-400 transition-colors hover:text-brand-orange"
+                        className="inline-flex min-h-10 items-center text-sm text-slate-400 transition-colors hover:text-brand-orange"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm text-slate-400 transition-colors hover:text-brand-orange"
+                        className="inline-flex min-h-10 items-center text-sm text-slate-400 transition-colors hover:text-brand-orange"
                       >
                         {link.label}
                       </Link>
@@ -105,13 +105,13 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-slate-500 sm:mt-14 sm:flex-row sm:items-center sm:justify-between sm:pt-8">
           <p>© {year} CitrusV. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-slate-300">
+            <Link href="/privacy" className="inline-flex min-h-10 items-center hover:text-slate-300">
               Privacy
             </Link>
-            <Link href="/terms" className="hover:text-slate-300">
+            <Link href="/terms" className="inline-flex min-h-10 items-center hover:text-slate-300">
               Terms
             </Link>
           </div>

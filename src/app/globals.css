@@ -36,6 +36,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -51,6 +53,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   line-height: 1.6;
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 ::selection {
@@ -74,8 +78,55 @@ img {
 }
 
 .container-citrus {
-  width: min(100% - 2rem, 72rem);
+  width: 100%;
+  max-width: 72rem;
   margin-inline: auto;
+  padding-inline: max(1rem, calc(env(safe-area-inset-left, 0px) + 0.75rem))
+    max(1rem, calc(env(safe-area-inset-right, 0px) + 0.75rem));
+}
+
+@media (min-width: 640px) {
+  .container-citrus {
+    padding-inline: max(1.5rem, calc(env(safe-area-inset-left, 0px) + 1rem))
+      max(1.5rem, calc(env(safe-area-inset-right, 0px) + 1rem));
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-citrus {
+    padding-inline: max(2rem, calc(env(safe-area-inset-left, 0px) + 1.25rem))
+      max(2rem, calc(env(safe-area-inset-right, 0px) + 1.25rem));
+  }
+}
+
+/* Stack primary CTA groups cleanly on phones */
+.cta-row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .cta-row {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+.cta-row > * {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .cta-row > * {
+    width: auto;
+  }
 }
 
 .text-gradient {

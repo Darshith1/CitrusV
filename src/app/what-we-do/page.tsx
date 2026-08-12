@@ -99,19 +99,19 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 export default function WhatWeDoPage() {
   return (
-    <div className="container-citrus py-16 lg:py-24">
+    <div className="container-citrus py-12 sm:py-16 lg:py-24">
       <SectionHeading
         eyebrow="What we do"
         title="Digital products and IT that"
         highlight="keep you moving"
         description="We design and build websites and software, then support the stack — cloud, security, marketing, and AI — so you get outcomes, not orphaned tools."
-        className="mb-10"
+        className="mb-8 sm:mb-10"
       />
-      <FadeUp className="mb-16 flex flex-wrap gap-3">
-        <Button href="/book" size="lg">
+      <FadeUp className="cta-row mb-12 max-w-md sm:mb-16 sm:max-w-none sm:justify-start">
+        <Button href="/book" size="lg" className="w-full sm:w-auto">
           Book a call
         </Button>
-        <Button href="/work" variant="ghost" size="lg">
+        <Button href="/work" variant="ghost" size="lg" className="w-full sm:w-auto">
           See our work
         </Button>
       </FadeUp>
@@ -121,7 +121,7 @@ export default function WhatWeDoPage() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
-        className="mb-24 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        className="mb-16 grid gap-4 sm:mb-24 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3"
       >
         {services.map((service, i) => {
           const Icon = iconMap[service.icon] ?? Sparkles;
@@ -199,16 +199,16 @@ export default function WhatWeDoPage() {
         ))}
       </FadeUp>
 
-      <FadeUp className="rounded-3xl bg-navy p-10 text-center text-white">
-        <h2 className="text-2xl font-bold">Let&apos;s scope your next step</h2>
-        <p className="mx-auto mt-3 max-w-lg text-slate-400">
+      <FadeUp className="rounded-2xl bg-navy p-7 text-center text-white sm:rounded-3xl sm:p-10">
+        <h2 className="text-xl font-bold sm:text-2xl">Let&apos;s scope your next step</h2>
+        <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400 sm:text-base">
           Prefer email?{" "}
           <Link href="/contact" className="text-brand-orange underline-offset-2 hover:underline">
             Contact us
           </Link>
           . Or book a Meet and we&apos;ll map options live.
         </p>
-        <Button href="/book" size="lg" className="mt-6">
+        <Button href="/book" size="lg" className="mt-6 w-full sm:w-auto">
           Book a call
         </Button>
       </FadeUp>
